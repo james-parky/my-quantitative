@@ -1,42 +1,115 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+    width: 100vw;
+    height: 100vh;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.instrument-serif-regular {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.instrument-serif-regular-italic {
+    font-family: "Instrument Serif", serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.app {
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: min(90vw, 500px);
+    margin: auto;
+    position: relative;
 }
 
-.card {
-  padding: 2em;
+.ticker-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    justify-content: start;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    overflow: scroll;
+    position: relative;
 }
 
-.read-the-docs {
-  color: #888;
+.ticker {
+    display: flex;
+    background: #26252F;
+    border-color: #3C3B3F;
+    border-width: 0.2rem;
+    border-style: solid;
+    border-radius: 0.5rem;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1rem;
+    align-items: center;
+    margin: 0;
+    width: 90%;
+    height: 4.5rem;
+}
+
+.ticker__names {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.ticker__names__short {
+    color: #AEAEAE;
+    font-weight: 900;
+    font-size: 2em;
+    line-height: 1em;
+    padding: 0;
+    margin: 0;
+}
+
+.ticker__names__long {
+    color: #AEAEAE;
+    font-weight: 200;
+    font-size: 0.72em;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.ticker__price-info {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.ticker__price-info__current-price {
+    color: #AEAEAE;
+    font-weight: 900;
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+}
+
+.ticker__price-info__price-change {
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 900;
+    border-radius: 0.2rem;
+    width: 3rem;
+    text-align: right;
+    padding-right: 0.2rem;
+    padding-top: 0;
+    margin: 0;
+}
+
+.form {
+    bottom: 0;
+    height: 30%;
+    margin: auto;
+    width: 100%;
+    outline: 1px solid blue;
 }
