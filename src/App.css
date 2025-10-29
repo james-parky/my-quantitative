@@ -1,115 +1,253 @@
 #root {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
 
 .instrument-serif-regular {
-    font-family: "Instrument Serif", serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .instrument-serif-regular-italic {
-    font-family: "Instrument Serif", serif;
-    font-weight: 400;
-    font-style: italic;
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .app {
-    height: 90%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    width: min(90vw, 500px);
-    margin: auto;
-    position: relative;
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: min(90vw, 500px);
+  margin: auto;
+  position: relative;
 }
 
 .ticker-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    justify-content: start;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    overflow: scroll;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  justify-content: start;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  overflow: auto;
+  position: relative;
 }
 
 .ticker {
-    display: flex;
-    background: #26252F;
-    border-color: #3C3B3F;
-    border-width: 0.2rem;
-    border-style: solid;
-    border-radius: 0.5rem;
-    justify-content: space-between;
-    gap: 1.5rem;
-    padding: 1rem;
-    align-items: center;
-    margin: 0;
-    width: 90%;
-    height: 4.5rem;
+  display: flex;
+  background: #26252f;
+  border-color: #3c3b3f;
+  border-width: 0.2rem;
+  border-style: solid;
+  border-radius: 0.5rem;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem;
+  align-items: center;
+  margin: 0;
+  width: 90%;
+  height: 4.5rem;
 }
 
 .ticker__names {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
 }
 
 .ticker__names__short {
-    color: #AEAEAE;
-    font-weight: 900;
-    font-size: 2em;
-    line-height: 1em;
-    padding: 0;
-    margin: 0;
+  color: #aeaeae;
+  font-weight: 900;
+  font-size: 2em;
+  line-height: 1em;
+  padding: 0;
+  margin: 0;
 }
 
 .ticker__names__long {
-    color: #AEAEAE;
-    font-weight: 200;
-    font-size: 0.72em;
-    padding: 0;
-    margin: 0;
-    text-align: left;
+  color: #aeaeae;
+  font-weight: 200;
+  font-size: 0.72em;
+  padding: 0;
+  margin: 0;
+  text-align: left;
 }
 
 .ticker__price-info {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 
 .ticker__price-info__current-price {
-    color: #AEAEAE;
-    font-weight: 900;
-    font-size: 1em;
-    padding: 0;
-    margin: 0;
+  color: #aeaeae;
+  font-weight: 900;
+  font-size: 1em;
+  padding: 0;
+  margin: 0;
 }
 
 .ticker__price-info__price-change {
-    color: white;
-    font-size: 0.72rem;
-    font-weight: 900;
-    border-radius: 0.2rem;
-    width: 3rem;
-    text-align: right;
-    padding-right: 0.2rem;
-    padding-top: 0;
-    margin: 0;
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 900;
+  border-radius: 0.2rem;
+  width: 3rem;
+  text-align: right;
+  padding-right: 0.2rem;
+  padding-top: 0;
+  margin: 0;
 }
 
 .form {
-    bottom: 0;
-    height: 30%;
-    margin: auto;
-    width: 100%;
-    outline: 1px solid blue;
+  width: 90%;
+  margin: auto;
+  padding: 1.5rem 0.75rem;
+}
+
+.form__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.form__row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.form__label {
+  color: #aeaeae;
+  font-size: 1.1rem;
+  text-align: left;
+  margin: 0;
+}
+
+.form__field {
+  background: #1a1a1f !important;
+  border: 1px solid #3c3b3f !important;
+  border-radius: 0.3rem !important;
+  color: #aeaeae !important;
+  text-align: center !important;
+}
+
+.form__field:hover {
+  border-color: #565660 !important;
+}
+
+.form__field:focus,
+.form__field:focus-within {
+  border-color: #7a7a84 !important;
+  box-shadow: none !important;
+}
+
+.form__field .ant-select-selector {
+  background: #1a1a1f !important;
+  border: 1px solid #3c3b3f !important;
+  border-radius: 0.3rem !important;
+}
+
+.form__field .ant-select-selection-search-input {
+  border-radius: 0.3rem !important;
+}
+
+.form__field .ant-select-selection-item,
+.form__field .ant-input,
+.form__field .ant-input-number-input {
+  background: #1a1a1f !important;
+  color: #aeaeae !important;
+  text-align: center !important;
+  font-weight: 700 !important;
+}
+
+.form__field.form__field--market-price .ant-input-number-input,
+.form__field.form__field--market-price .ant-input-number-input[disabled] {
+  font-weight: 700 !important;
+}
+
+.form__field.form__field--market-price.ant-input-number-disabled {
+  background: rgba(60, 59, 63, 0.3) !important;
+  cursor: not-allowed !important;
+}
+
+.form__field.form__field--market-price.ant-input-number-disabled .ant-input-number-input {
+  color: rgba(174, 174, 174, 0.6) !important;
+  background: transparent !important;
+  cursor: not-allowed !important;
+}
+
+.ant-select-dropdown {
+  background: #1a1a1f !important;
+  border: 1px solid #3c3b3f !important;
+}
+
+.ant-select-item {
+  background: #1a1a1f !important;
+  color: #aeaeae !important;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background: #26252f !important;
+  color: #aeaeae !important;
+}
+
+.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background: #26252f !important;
+}
+
+.form__direction {
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.form__direction--buy {
+  background: #367b39;
+}
+
+.form__direction--sell {
+  background: #ee4f4d;
+}
+
+.form__actions {
+  background: #3c3b3f;
+  margin: -1.5rem;
+  margin-top: 0;
+  padding: 0.6rem 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.form__book-button {
+  width: 80%;
+  background: #5a5aff !important;
+  border: none !important;
+  border-radius: 0.5rem !important;
+  font-weight: 700 !important;
+  height: 2.5rem !important;
+}
+
+.form__book-button:hover:not(:disabled) {
+  background: #7070ff !important;
+}
+
+.form__book-button:disabled {
+  background: #221a3b !important;
+  color: #565660 !important;
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
 }
